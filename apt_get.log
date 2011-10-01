@@ -1,0 +1,18 @@
+# install c/c++ compile environment
+sudo apt-get install build-essential
+
+# install codes, fonts, java environment, flash player
+sudo apt-get install ubuntu-restricted-extras 
+
+# install qt4
+#sudo apt-get install qt4-dev-tools 
+#sudo apt-get install qt4-qtconfig
+
+# ssh, git, svn
+sudo apt-get install sshpass
+sudo apt-get install git
+sudo apt-get install svn
+
+# librarys
+# sudo apt-get install libtiff4-dev
+# sudo apt-get install liblpsolve55-dev
