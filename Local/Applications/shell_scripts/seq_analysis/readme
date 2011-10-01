@@ -1,0 +1,11 @@
+What:
+These scripts will analysis each fast sequence in input/seqs.fasta file. Each fast will correspond to a marker of an individual in input/CB.txt and a site in input/sites.txt.
+
+
+Makesure blast and clustalw are installed.
+sudo apt-get install blast2
+sudo apt-get install clustalw
+
+run:
+./group_by_site.sh
+./merge_and_clustalw.sh

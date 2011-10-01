@@ -1,0 +1,65 @@
+                                 README
+
+1. create_code_v3d_plugin.sh
+
+usage : ./create_code_v3d_plugin.sh plugin_template
+        ./create_code_v3d_plugin.sh !
+
+the first usage will create v3d plugin project from a template file with simple parameters
+the second usage will produce a demo template file
+
+2. create_code_v3d_plugin2.sh
+The same usage as create_plugin.sh, but xxx_func.h/cpp will not be produced
+
+3. create_code_v3d_dialog.sh
+
+usage : ./create_code_v3d_dialog.sh dialog_template
+		./create_code_v3d_dialog.sh !
+
+the first usage will create v3d dialog class from a template file with simple dialog description
+the second usage will produce a demo dialog template file
+
+4. create_code_cpp_main.sh
+
+usage : create_code_cpp_main.sh
+
+create a test cpp file with only main() function
+
+5. shell_usage.sh
+
+usage : shell_usage.sh <command>
+
+It will display the usage of many shell commands. Currently supported commands : if case for until while array string trap
+
+6. getcode.sh
+
+usage : getcode.sh <code_name> [options]
+
+It will invoke "create_code_code_name.sh [options]"
+
+7. to_echo_code.sh
+
+usage : to_echo_code.sh <file_name>
+
+It will produce the shell code that will echo the content of file_name
+
+
+
+OLD README
+=======================================================================
+this folder will store all the shell scrips I have write before
+
+Some of my previous scripts can refer to 
+a. http://www.picb.ac.cn/~xiaohang/research/tools/shell/my_innovation.html
+b. mymac/Local/CrossPlatform/bin/*
+
+Previous Scripts:
+1. lyric
+a. lyric_editor , one parameter, the file contains non labeled lyric
+b. lrcplayer *.mp3 , will check lrc folder in current folder, if exit lyric file with the same name to mp3 file, then lyric will be display
+d. get_lyric , search and download lyric from baidu
+
+2. srt
+a. srt_check test.srt  , will get all the unknow words from test.srt
+b. srt_refresh test.srt > out.srt, will put unknow words' explain to srt and output the final srt to out.srt
+ps: currently srt_refresh have some bugs

@@ -1,0 +1,9 @@
+#! /bin/sh
+scp -r $@ "xiaohang@gate1.picb.ac.cn:~/Sites/downloads/"
+cmd=""
+while [ "$#" != "0" ]
+do
+	cmd=$cmd"<a href=\"downloads/$1\">$1</a><p>"
+	shift
+done
+ssh xiaohang@gate1.picb.ac.cn "echo '$cmd' >> ~/Sites/downloads.html"
