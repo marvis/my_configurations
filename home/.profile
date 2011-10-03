@@ -12,7 +12,4 @@ export LD_LIBRARY_PATH=/home/mar/Local/lib:/home/mar/work/v3d_external/v3d_main/
 export CPLUS_INCLUDE_PATH=/home/mar/Local/include:$CPLUS_INCLUDE_PATH
 export LANG="en_US.utf8"
 
-
-alias hist="v3d_convert -hist"
-alias marker_mst="v3d_convert -marker-mst"
-alias centers_between="v3d_convert -centers-between"
+source /home/mar/.v3d_convert_alias
