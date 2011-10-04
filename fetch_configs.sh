@@ -5,6 +5,7 @@ mkdir -p home/.vim
 cp ~/.profile ./home/.profile
 cp ~/.bashrc ./home/.bashrc
 cp ~/.vimrc ./home/.vimrc
+cp ~/.myshell.sh ./home/.myshell.sh
 cp -r ~/.vim ./home/
 
 cp ~/.ssh/id_rsa.pub ./home/.ssh/
