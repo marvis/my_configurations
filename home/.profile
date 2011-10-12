@@ -1,3 +1,4 @@
+alias data="cd /home/mar/work/wormdata/orig/crop"
 alias v="$HOME/Local/bin/v3d_convert"
 alias clewn="$HOME/Local/bin/clewn -ga \"--args v3d_convert\" -va"
 alias picb='ssh xiaohang@gate1.picb.ac.cn'
