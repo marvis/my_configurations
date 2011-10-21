@@ -91,9 +91,12 @@ let NERDShutUp=1
 set nocp
 filetype plugin on
 filetype indent on
+set tags+=./tags
+set tags+=../tags
 set tags+=~/.vim/tags/v3d_main_tags
 set tags+=~/.vim/tags/cpp
 set tags+=~/.vim/tags/boost
+set tags+=~/.vim/tags/cgal_tags
 set tags+=~/.vim/tags/gl
 set tags+=~/.vim/tags/qtgui
 set tags+=~/.vim/tags/sdl
