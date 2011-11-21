@@ -1,5 +1,5 @@
 #! /bin/sh
-if [[ "$#" -eq "0" || "$1" = "!" ]]
+if [ "$#" = "0" -o "$1" = "!" ]
 then
 	echo "usage : getcode.sh <code_name> [option]"
 	echo ""

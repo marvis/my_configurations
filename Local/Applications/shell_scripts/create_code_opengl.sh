@@ -1,6 +1,6 @@
 #! /bin/sh
 
-if [[ "$#" = "0" || "$1" = "!" ]]; then
+if [ "$#" = "0" -o "$1" = "!" ]; then
 	echo "usage : create_code_opengl.sh <code_name> <os_type>"
 	echo ""
 	echo -e "The command will produce opengl codes. The os_type is macos or linux. If omited, it will be current os type."

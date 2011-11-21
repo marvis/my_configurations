@@ -1,6 +1,16 @@
 #function v3d(){
 #	eval `which v3d` $@ > /dev/null 2>&1
 #}
+
+#usage : mplayer movie.avi movie.sub
+function mplayer()
+{
+	if [ $# -eq "2" ]; then 
+		`which mplayer` -noautosub -noquiet -nofs -slave -idle -ontop -utf8 -embeddedfonts -volstep 10 -sub "$2" -ss 00:00:01 -geometry +-6+25 -ass -fontconfig "$1"
+	else `which mplayer` $1
+	fi
+}
+
 function clewn()
 {
 	if [ "$#" -eq "0" ];then
@@ -16,17 +26,13 @@ function gv()
 {
 	clewn $@
 }
-function jubler()
-{
-	cur_path=`pwd`
-	cd /home/mar/Local/Applications/Jubler && ./jubler && cd $cur_path
-}
+
 function upfile(){
 scp -r -P 3333 $1 hanxia@localhost:~/work/temp/
 }
 
 function downfile(){
-scp -P 3333 hanxia@localhost:~/work/temp/$1 `pwd`/
+scp -r -P 3333 hanxia@localhost:~/work/temp/$1 `pwd`/
 }
 
 function release()

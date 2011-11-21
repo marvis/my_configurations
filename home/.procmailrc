@@ -1,0 +1,10 @@
+PATH=/bin:/usr/bin:/usr/local/bin 
+VERBOSE=off  
+DEFAULT=/var/spool/mail/mar
+MAILDIR=$HOME/.mutt
+LOGFILE=$HOME/.procmaillog  
+# Recipes below this comment:
+
+:0:
+* ^TOmutt-user
+mutt

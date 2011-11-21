@@ -1,6 +1,14 @@
+#! /bin/sh -x
 mkdir -p home
 mkdir -p home/.ssh
 mkdir -p home/.vim
+
+cp -r ~/.certs ./home
+cp ~/.fetchmailrc ./home
+cp ~/.procmailrc ./home
+cp ~/.msmtprc ./home
+cp ~/.muttrc ./home
+cp -r  ~/.mutt ./home
 
 cp ~/.profile ./home/.profile
 cp ~/.bashrc ./home/.bashrc
