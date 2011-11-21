@@ -73,5 +73,8 @@ set pager_context=5  # Retain 5 lines of previous page when scrolling.
 set status_on_top    # Status bar on top.
 push <show-version>  # Shows mutt version at startup
 
-#macro
-macro index,pager I '<shell-escape> fetchmail -v<enter>'
+#======================================================#
+# My own setting
+macro index,pager I '<shell-escape> fetchmail <enter>'
+#set sort = threads
+set sort=reverse-date-sent

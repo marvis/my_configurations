@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/picb/home51/xiaohang/Desktop/three_point_condition'
 let g:netrw_dirhist_2='/home/mar/work/v3d_external/2010_hackathon/hang/internal/v3d_convert'
 let g:netrw_dirhist_3='/home/mar/work/v3d_external/2010_hackathon/hang/internal/v3d_convert/graph_library'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/mar/work/v3d_external/2010_hackathon/hang/internal/
 let g:netrw_dirhist_6='/home/mar/Sites/Sites/research/tools/algorithms/compilation_principal'
 let g:netrw_dirhist_7='/home/mar/Music/musics'
 let g:netrw_dirhist_8='/home/mar/Sites/Sites/research/tools/commands'
+let g:netrw_dirhist_9='/home/mar/.mutt'
