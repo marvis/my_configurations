@@ -2,7 +2,7 @@ cat > ~/.fetchmailrc << istop
 poll mail_gmail via pop.gmail.com
 	with proto POP3
 	user 'hang.xiao.hh'
-	there with password 'new20053456'
+	there with password 'xxxxxxxx'
 	is 'mar' here
 	mda "/usr/bin/procmail -d %T"
 	options
@@ -32,7 +32,7 @@ poll mail_163 via pop3.163.com
 	with proto POP3
 	uidl
 	user 'my_645'
-	there with password 'xh2.718281828'
+	there with password 'xxxxxxxxxxx'
 	is 'mar' here
 	mda "/usr/bin/procmail -d %T"
 	options
@@ -59,7 +59,7 @@ poll mail_yahoo via pop.mail.yahoo.com
 	with proto POP3
 	uidl
 	user 'xiaohang_87'
-	there with password 'xh2.718281828'
+	there with password 'xxxxxxxxxxx'
 	is 'mar' here
 	mda "/usr/bin/procmail -d %T"
 	options
@@ -86,7 +86,7 @@ poll webmail.picb.ac.cn
 	with proto POP3
 	uidl
 	user 'xiaohang'
-	there with password 'xiaohang20053456'
+	there with password 'xxxxxxxxx'
 	is 'mar' here
 	mda "/usr/bin/procmail -d %T"
 	options
