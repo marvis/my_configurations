@@ -1,7 +1,46 @@
+#function mutt()
+#{
+#	fetchmail
+#	/usr/bin/mutt
+#}
 #function v3d(){
 #	eval `which v3d` $@ > /dev/null 2>&1
 #}
-
+function site()
+{
+	echo "1. 生物谷      http://www.bioon.com/biology"
+	echo "2. nature 中文 http://www.natureasia.com/ch"
+	echo -n "Choose : "
+	read line
+	sites=("http://www.bioon.com/biology" 
+	       "http://www.natureasia.com/ch")
+	line=$[line-1]
+	firefox ${sites[$line]}
+}
+function bbs()
+{
+	echo "1. 珞珈山水   bbs.whu.edu.cn"
+	echo "2. 南京小百合 bbs.nju.edu.cn"
+	echo "3. 日月光华   bbs.fudan.sh.cn"
+	echo "4. 饮水思源   bbs.sjtu.edu.cn"
+	echo "5. 水木清华   bbs.tsinghua.edu.cn"
+	echo "6. 北大未名   bbs.pku.edu.cn"
+	echo "7. mitbbs     bbs.mitbbs.com"
+	echo -n "Choose : "
+	read line
+	sites=("bbs.whu.edu.cn" 
+	       "bbs.nju.edu.cn" 
+		   "bbs.fudan.sh.cn" 
+		   "bbs.sjtu.edu.cn"  
+		   "bbs.tsinghua.edu.cn" 
+		   "bbs.pku.edu.cn" 
+		   "bbs.mitbbs.com");
+	line=$[line-1]
+	site=${sites[$line]}
+	#echo luit -encoding gbk telnet $site
+	#luit -encoding gbk telnet $site
+	firefox $site
+}
 #usage : mplayer movie.avi movie.sub
 function mplayer()
 {

@@ -5,7 +5,7 @@ set from = "hang.xiao.hh@gmail.com"
 set use_from = yes
 set envelope_from ="yes"
 set reverse_name=yes
-alternates "hang\.xiao\.hh@gmail\.com|xiaohang@picb\.ac\.cn"
+# alternates "hang\.xiao\.hh@gmail\.com|xiaohang@picb\.ac\.cn"   #replace by folder-hook
 
 # Use a signature
 set signature="~/.signature"
@@ -13,20 +13,40 @@ set signature="~/.signature"
 # Use msmtp rather than sendmail. Check that 
 # the path is correct for your system:
 set sendmail="/usr/bin/msmtp"   
+set read_inc=30           # set the increase value when read large mailbox
 
 #======================================================#
 # Folders
 set folder="$HOME/.mail"       # Local mailboxes stored here
-set mbox="$HOME/.mail/mail_picb"   # ?
+set mbox="+inbox"         # save mail dir
 set record="+sent"             # Where to store sent messages
 set postponed="+postponed"     # Where to store draft messages
 #set mbox_type=maildir          # mbox           # Mailbox type
-set spoolfile = "$HOME/.mail/mail_picb"   # if $MAIL is not set
-set move=no                    # whether move mail from spool to mbox when quite
-mailboxes "+mail_gmail"
-mailboxes "+mail_163"
-mailboxes "+mail_yahoo"
-mailboxes "+mail_picb"
+set spoolfile = "$HOME/.mail/mail1_picb"   # if $MAIL is not set
+#set spoolfile = "imaps://xiaohang@webmail.picb.ac.cn"   # if $MAIL is not set
+set move=no                    # stop asking to "move read messages to mbox"
+mailboxes "+mail1_picb"
+mailboxes "+mail2_gmail"
+#mailboxes "+mail3_163"
+#mailboxes "+mail4_yahoo"
+#mailboxes "+mail5_backup"
+mailboxes imaps://xiaohang@webmail.picb.ac.cn
+mailboxes imaps://hang.xiao.hh@gmail.com@imap.gmail.com
+
+folder-hook mail1_picb   set from = "xiaohang@picb.ac.cn"
+folder-hook mail2_gmail  set from = "hang.xiao.hh@gmail.com"
+folder-hook mail3_163    set from = "my_645@163.com"
+folder-hook mail4_yahoo  set from = "xiaohang_87@yahoo.com.cn"
+folder-hook mail5_backup set from = "xiaohang@picb.ac.cn"
+
+save-hook ~A =mail_saved     # set default save mail box
+set confirmappend = no       # disable confirm append infomation
+
+account-hook imaps://xiaohang@webmail.picb.ac.cn \
+        'set imap_user=xiaohang@picb.ac.cn imap_pass="xiaohang20053456"'
+account-hook imaps://hang.xiao.hh@gmail.com@imap.gmail.com \
+        'set imap_user=hang.xiao.hh@gmail.com imap_pass="new20053456'
+
 #======================================================#
 # Watch these mailboxes for new mail, useful only if 
 # Procmail or Maildrop is used to sort mail.
@@ -46,7 +66,6 @@ hdr_order Date: From: User-Agent: X-Mailer X-Operating-System To: \
 # vim of course!
 set editor="vim -c 'set tw=70 et' '+/^$' " 
 set edit_headers=yes      # See the headers when editing
-
 #======================================================#
 # Aliases
 
@@ -83,8 +102,18 @@ push <show-version>  # Shows mutt version at startup
 #set sort = threads
 set sort=reverse-date-sent        # sort by date reverse
 
-#macro index,pager I '<shell-escape> fetch_mail.sh <enter>'
-#macro generic "<esc>1" ":set from='Hang Xiao  <hang.xiao.hh@gmail.com>'"
-#macro generic "<esc>2" ":set from='Hang Xiao  <xiaohang@picb.ac.cn>'"
-macro index,pager "I" "yk\n" 
+macro index,pager I '<shell-escape> fetch_mail.sh <enter>'
+macro generic "<esc>1" ":set from='Hang Xiao  <hang.xiao.hh@gmail.com>'"
+macro generic "<esc>2" ":set from='Hang Xiao  <xiaohang@picb.ac.cn>'"
+#macro index,pager "I" "yk\n" 
 macro index,pager "i" "yj\n" 
+
+#set charset="UTF-8"              # terminal coding
+#set send_charset="UTF-8"         # charset for sending mail
+#set locale="zh_CN.UTF-8"
+#charset-hook ^us-ascii$ gb2312
+#charset-hook !UTF-8 gb2312
+#set assumed_charset="gb2312"
+#set rfc2047_parameters=yes       # solve problem of attachment mess coding
+
+auto_view text/html

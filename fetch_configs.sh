@@ -3,12 +3,10 @@ mkdir -p home
 mkdir -p home/.ssh
 mkdir -p home/.vim
 
-cp -r ~/.certs ./home
-cp ~/.fetchmailrc ./home
-cp ~/.procmailrc ./home
-cp ~/.msmtprc ./home
-cp ~/.muttrc ./home
-cp -r  ~/.mutt ./home
+cp -r ~/.certs ./mutt
+cp ~/.msmtprc ./mutt
+cp ~/.muttrc ./mutt
+cp -r  ~/.mutt ./mutt
 
 cp ~/.profile ./home/.profile
 cp ~/.bashrc ./home/.bashrc
@@ -29,6 +27,11 @@ cp ~/Local/bin/ruhr_out.sh ./Local/bin/
 cp ~/Local/bin/show_password ./Local/bin/
 cp ~/Local/bin/v3d ./Local/bin/
 cp ~/Local/bin/v3d_convert ./Local/bin/
+cp ~/Local/bin/fetch_mail.sh ./Local/bin/
+cp ~/Local/bin/youtube-dl ./Local/bin/
+cp ~/Local/bin/youku.py ./Local/bin/
+cp ~/Local/bin/cgal_create_cmake_script ./Local/bin/
+cp ~/Local/bin/cgal_make_macosx_app ./Local/bin/
 
 mkdir -p Local/include
 cp ~/Local/include/lp_Hash.h ./Local/include/
