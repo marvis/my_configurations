@@ -1,0 +1,11 @@
+INCLUDE /home/mar/.rem/birthdays.rem  
+INCLUDE /home/mar/.rem/reading.rem  
+INCLUDE /home/mar/.rem/todos.rem
+REM Nov 27 2011 MSG study screen   finished
+REM Nov 27 2011 MSG study tmux     finished
+REM Nov 28 2011 MSG study ledger   finished
+REM Nov 28 2011 MSG shutdown       finished
+REM Nov 28 2011 MSG study ncurse   finished
+REM Nov 29 2011 MSG nohup setsid
+REM Nov 29 2011 MSG mplayer -vo fbdev
+REM Nov 29 2011 AT 17:00 DURATION 1:00 MSG 

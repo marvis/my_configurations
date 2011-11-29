@@ -3,6 +3,9 @@ mkdir -p home
 mkdir -p home/.ssh
 mkdir -p home/.vim
 
+cp ~/.rem/* ./reminder
+cp ~/.reminders ./reminder
+cp 
 cp -r ~/.certs ./mutt
 cp ~/.msmtprc ./mutt
 cp ~/.muttrc ./mutt
