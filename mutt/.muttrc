@@ -43,9 +43,9 @@ save-hook ~A =mail_saved     # set default save mail box
 set confirmappend = no       # disable confirm append infomation
 
 account-hook imaps://xiaohang@webmail.picb.ac.cn \
-        'set imap_user=xiaohang@picb.ac.cn imap_pass="xiaohang20053456"'
+        'set imap_user=xiaohang@picb.ac.cn imap_pass="x"'
 account-hook imaps://hang.xiao.hh@gmail.com@imap.gmail.com \
-        'set imap_user=hang.xiao.hh@gmail.com imap_pass="new20053456'
+        'set imap_user=hang.xiao.hh@gmail.com imap_pass="x"'
 
 #======================================================#
 # Watch these mailboxes for new mail, useful only if 
