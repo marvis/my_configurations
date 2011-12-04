@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/mar/.rem'
 let g:netrw_dirhist_2='/home/mar/Sites/Sites/research/tools/commands/gnuplot'
 let g:netrw_dirhist_3='/home/mar/Sites/Sites/research/tools/commands/framebuffer'
 let g:netrw_dirhist_4='/usr/share/grub'
+let g:netrw_dirhist_5='/home/mar/Sites/Sites/vimwiki/information/background_musics'
+let g:netrw_dirhist_6='/home/mar/Sites/Sites/vimwiki/information/licences'
+let g:netrw_dirhist_7='/home/mar/Sites/Sites/downloads'
+let g:netrw_dirhist_8='/home/mar/Sites/Sites/html_bak'
+let g:netrw_dirhist_9='/home/mar/Sites/Sites/vimwiki/information/telephone'

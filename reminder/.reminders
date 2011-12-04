@@ -1,11 +1,22 @@
 INCLUDE /home/mar/.rem/birthdays.rem  
 INCLUDE /home/mar/.rem/reading.rem  
 INCLUDE /home/mar/.rem/todos.rem
-REM Nov 27 2011 MSG study screen   finished
-REM Nov 27 2011 MSG study tmux     finished
-REM Nov 28 2011 MSG study ledger   finished
-REM Nov 28 2011 MSG shutdown       finished
-REM Nov 28 2011 MSG study ncurse   finished
-REM Nov 29 2011 MSG nohup setsid
-REM Nov 29 2011 MSG mplayer -vo fbdev
-REM Nov 29 2011 AT 17:00 DURATION 1:00 MSG 
+REM Nov 22 2011 MSG y ZENG Zimo "墨迹"
+REM Nov 23 2011 MSG y Larry Lang "Why our life is so hard" 
+REM Nov 24 2011 MSG ? Benjamin Graham "Security Analysis" cpt 1 2 3 4 5 , 42
+REM Nov 25 2011 MSG ? Benjamin Graham "The Intellient Investor" cpt 1
+REM Nov 26 2011 MSG ? Buffett "The Snowball Warren" cpt 43
+REM Nov 27 2011 MSG y study screen
+REM Nov 27 2011 MSG y study tmux
+REM Nov 28 2011 MSG y study ledger
+REM Nov 28 2011 MSG y shutdown
+REM Nov 28 2011 MSG y study ncurse
+REM Nov 29 2011 MSG y nohup setsid
+REM Nov 29 2011 MSG y mplayer -vo fbdev
+REM Nov 29 2011 MSG ? CHEN Xujun "Ill when eat wrongly!"
+REM Nov 30 2011 AT 08:00 DURATION 1:00 MSG read : http://blog.renren.com/share/77819/10305897104
+REM Nov 30 2011 AT 02:00 MSG excited by wyn's article
+REM Nov 30 2011 AT 03:00 MSG excited by "why go to country's company"
+REM Dec 16 2011 AT 13:00 DURATION 1:00 MSG check the status of DS2019 fee
+REM Nov 30 2011 MSG "html2wiki and wiki2html"
+REM Nov 30 2011 MSG "SparkleShare : http://www.jinbo123.com/1533.html"

@@ -41,15 +41,21 @@ function bbs()
 	#luit -encoding gbk telnet $site
 	firefox $site
 }
-#usage : mplayer movie.avi movie.sub
-function mplayer()
+#usage : mymplayer movie.avi movie.sub
+function gui_mplayer()
 {
 	if [ $# -eq "2" ]; then 
-		`which mplayer` -noautosub -noquiet -nofs -slave -idle -ontop -utf8 -embeddedfonts -volstep 10 -sub "$2" -ss 00:00:01 -geometry +-6+25 -ass -fontconfig "$1"
+		`which mplayer` -utf8 -sub "$2" -ass "$1"
 	else `which mplayer` $1
 	fi
 }
-
+function tty_mplayer()
+{
+	if [ $# -eq "2" ]; then 
+		sudo `which mplayer` -vo fbdev -vf scale=1280:800 -utf8 -sub "$2" -ass "$1"
+	else sudo `which mplayer` -vo fbdev -vf scale=1280:800 $1
+	fi
+}
 function clewn()
 {
 	if [ "$#" -eq "0" ];then
@@ -76,7 +82,7 @@ scp -r -P 3333 hanxia@localhost:~/work/temp/$1 `pwd`/
 
 function release()
 {
-	/home/mar/work/v3d_external/2010_hackathon/hang/internal/v3d_convert/bin/release_v3d_convert.sh
+	$V3D_CONVERT_PATH/bin/release_v3d_convert.sh
 }
 
 function codenum(){
