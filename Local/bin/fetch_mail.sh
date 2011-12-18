@@ -105,7 +105,7 @@ LOGFILE=$HOME/.procmaillog
 mutt
 istop
 
-#fetchmail
+fetchmail
 
 > ~/.fetchmailrc
 > ~/.procmailrc

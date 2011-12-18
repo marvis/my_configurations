@@ -29,7 +29,7 @@ mailboxes "+mail1_picb"
 mailboxes "+mail2_gmail"
 mailboxes "+mail_saved"
 #mailboxes "+mail3_163"
-#mailboxes "+mail4_yahoo"
+mailboxes "+mail4_yahoo"
 #mailboxes "+mail5_backup"
 #mailboxes imaps://xiaohang@webmail.picb.ac.cn
 #mailboxes imaps://hang.xiao.hh@gmail.com@imap.gmail.com
@@ -43,10 +43,8 @@ folder-hook mail5_backup set from = "xiaohang@picb.ac.cn"
 save-hook ~A =mail_saved     # set default save mail box
 set confirmappend = no       # disable confirm append infomation
 
-account-hook imaps://xiaohang@webmail.picb.ac.cn \
-        'set imap_user=xiaohang@picb.ac.cn imap_pass="xiaohang20053456"'
-account-hook imaps://hang.xiao.hh@gmail.com@imap.gmail.com \
-        'set imap_user=hang.xiao.hh@gmail.com imap_pass="new20053456'
+#account-hook imaps://xiaohang@webmail.picb.ac.cn 'set imap_user=xiaohang@picb.ac.cn imap_pass="xiaohang20053456"'
+#account-hook imaps://hang.xiao.hh@gmail.com@imap.gmail.com 'set imap_user=hang.xiao.hh@gmail.com imap_pass="new20053456'
 
 #======================================================#
 # Watch these mailboxes for new mail, useful only if 
@@ -65,7 +63,7 @@ hdr_order Date: From: User-Agent: X-Mailer X-Operating-System To: \
 #======================================================#
 # which editor do you want to use? 
 # vim of course!
-set editor="vim -c 'set tw=70 et' '+/^$' " 
+set editor="vi -c 'set tw=70 et' '+/^$' " 
 set edit_headers=yes      # See the headers when editing
 #======================================================#
 # Aliases
@@ -109,12 +107,13 @@ macro generic "<esc>2" ":set from='Hang Xiao  <xiaohang@picb.ac.cn>'"
 #macro index,pager "I" "yk\n" 
 macro index,pager "i" "yj\n" 
 
-#set charset="UTF-8"              # terminal coding
-#set send_charset="UTF-8"         # charset for sending mail
-#set locale="zh_CN.UTF-8"
-#charset-hook ^us-ascii$ gb2312
-#charset-hook !UTF-8 gb2312
-#set assumed_charset="gb2312"
-#set rfc2047_parameters=yes       # solve problem of attachment mess coding
+set charset="UTF-8"              # terminal coding
+set send_charset="UTF-8"         # charset for sending mail
+set locale="zh_CN.UTF-8"
+charset-hook ^us-ascii$ gb2312
+charset-hook !UTF-8 gb2312
+set assumed_charset="gb2312"
+set rfc2047_parameters=yes       # solve problem of attachment mess coding
 
 auto_view text/html
+set include                # 回信时自动包含原文

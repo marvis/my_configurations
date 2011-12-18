@@ -173,7 +173,7 @@ map <F3> :silent! Tlist<CR>      "  按下F3就可以呼出了
 "********************************************************
 " NERDTree
 "********************************************************
-nmap <leader>e  :NERDTree<CR>
+"nmap <leader>e  :NERDTree<CR>
 
 
 "********************************************************
@@ -207,7 +207,7 @@ let g:vimwiki_list = [{'path': '~/Sites/Sites/vimwiki/',
       \ 'html_header': '~/Sites/Sites/vimwiki/templates/header.tpl',
       \ 'html_footer': '~/Sites/Sites/vimwiki/templates/footer.tpl',
       \ 'nested_syntaxes' : {'python': 'python','c++': 'cpp'},
-      \ 'diary_link_count': 5}]
+      \ 'diary_link_count': 1}]
  
 " 对中文用户来说，我们并不怎么需要驼峰英文成为维基词条
 let g:vimwiki_camel_case = 0
@@ -225,7 +225,25 @@ let g:vimwiki_menu = ''
 let g:vimwiki_CJK_length = 1
  
 " 让wiki识别更多的文件类型，这些文件不会转化为html文件
-let g:vimwiki_file_exts='pdf,ppt,txt,doc,c,cpp,rtf,xls,php,zip,rar,7z,html,gz,pl,chm,CHM,r,R,h, htm,sh'
+let g:vimwiki_file_exts='pdf,ppt,txt,doc,c,cpp,rtf,xls,php,zip,rar,7z,html,gz,pl,chm,CHM,r,R,h, htm,sh,mdb,flv,mp3,mp4'
 " 详见下文...
-let g:vimwiki_valid_html_tags='ul,lib,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1'
+let g:vimwiki_valid_html_tags='ul,lib,i,s,u,sub,sup,kbd,del,br,hr,div,code,h1,span'
 let g:vimwiki_list_ignore_newline=0
+let g:vimwiki_hl_cb_checked=1          " Highlight checked [X] check box with |group-name| Comment
+
+"********************************************************************
+" sdcv support in vim
+"********************************************************************
+function! Mydict()
+  let expl=system('dic ' .
+        \  expand("<cword>"))
+  windo if
+        \ expand("%")=="diCt-tmp" |
+        \ q!|endif
+  25vsp diCt-tmp
+  setlocal buftype=nofile bufhidden=hide noswapfile
+  1s/^/\=expl/
+  1
+endfunction
+nmap m :call Mydict()<CR><C-w><C-w>
+nmap <leader>ee :e ~/.words<CR>

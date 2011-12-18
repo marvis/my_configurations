@@ -3,6 +3,7 @@ mkdir -p home
 mkdir -p home/.ssh
 mkdir -p home/.vim
 
+cp ~/.newsbeuter/* ./newsbeuter
 cp ~/.rem/* ./reminder
 cp ~/.reminders ./reminder
 cp 
