@@ -240,10 +240,11 @@ function! Mydict()
   windo if
         \ expand("%")=="diCt-tmp" |
         \ q!|endif
-  25vsp diCt-tmp
+  80vsp diCt-tmp
   setlocal buftype=nofile bufhidden=hide noswapfile
   1s/^/\=expl/
   1
 endfunction
 nmap m :call Mydict()<CR><C-w><C-w>
+nmap M j:call Mydict()<CR><C-w><C-w>
 nmap <leader>ee :e ~/.words<CR>
